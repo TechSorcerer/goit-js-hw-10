@@ -2,8 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-
-document.addEventListener('DOMContentLoaded', function () {
+~document.addEventListener('DOMContentLoaded', function () {
   const datetimePicker = document.getElementById('datetime-picker');
   const startBtn = document.querySelector('[data-start]');
   const daysSpan = document.querySelector('[data-days]');
