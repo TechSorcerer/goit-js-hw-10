@@ -3,8 +3,6 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const flatpickr = require('flatpickr');
-
 document.addEventListener('DOMContentLoaded', function () {
   const datetimePicker = document.getElementById('datetime-picker');
   const startBtn = document.querySelector('[data-start]');
