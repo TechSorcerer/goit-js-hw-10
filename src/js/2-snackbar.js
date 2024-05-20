@@ -4,8 +4,11 @@ import 'izitoast/dist/css/iziToast.min.css';
 document.querySelector('.form').addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const delay = parseInt(document.querySelector('input[name="delay"]').value);
-  const state = document.querySelector('input[name="state"]:checked').value;
+  const delayInput = document.querySelector('input[name="delay"]');
+  const stateInput = document.querySelector('input[name="state"]:checked');
+
+  const delay = parseInt(delayInput.value);
+  const state = stateInput.value;
 
   const promise = new Promise((resolve, reject) => {
     if (state === 'fulfilled') {
@@ -32,4 +35,6 @@ document.querySelector('.form').addEventListener('submit', function (event) {
         message: `❌ Rejected promise in ${delay}ms`,
       });
     });
+  delayInput.value = '';
+  stateInput.checked = false;
 });
